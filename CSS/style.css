@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: rgb(7, 26, 37);
+}
+nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+nav .logo{
+    position: relative;
+    height: 80px;
+    width: 30%;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+nav .logo li.list{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo li .fa-regular.fa-sun{
+    position: absolute;
+    top:25px;
+}
+nav .logo li .fa-solid.fa-moon{
+    position: absolute;
+    top: 25px;
+    opacity: 1;
+}
+nav .logo li.list:hover{
+    position: absolute;
+    background-color: rgba(138, 43, 226,0.3);
+    height: 70px;
+    width: 70px;
+}
+nav .navigation{
+    position: relative;
+    width: 500px;
+    height: 80px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+nav .navigation ul{
+    display: flex;
+    width: 400px;
+}
+nav .navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+nav .navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+nav .navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 80px;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.5s;
+    color: lime;
+    top: -15px;
+    opacity: 0;
+}
+nav .navigation ul li.active a .icon{
+    transform: translateY(50px);
+    opacity: 1;
+}
+nav .navigation ul li a .text{
+    position: absolute;
+    color: lime;
+    font-weight: 400;
+    font-size: 24px;
+    transition: 0.5s;
+    top: 30px;
+    opacity: 1;
+}
+nav .navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+.indicator{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    background-color: blue;
+    left: -85px;
+    top: 0px;
+    border-radius: 50%;
+    border: 6px solid rgb(7, 26, 37);
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: -23.5%;
+    left: -58%;
+    height: 40px;
+    width: 40px;
+    border-bottom-right-radius: 15px;
+    background-color: blueviolet;
+    background: transparent;
+    box-shadow: 0 10px 0 0 rgb(7, 26, 37);
+    opacity: 0;
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: -23.5%;
+    right: -58%;
+    height: 40px;
+    width: 40px;
+    border-bottom-left-radius: 15px;
+    background-color: blueviolet;
+    background: transparent;
+    box-shadow: 0 10px 0 0 rgb(7, 26, 37);
+    opacity: 0;
+}
+.indicator.active{
+    transform: translateX(80px);
+}
+nav .navigation ul li:nth-child(1).active ~ .indicator{
+    top: 50px;
+    transform: translateX(calc(135px * 1));
+}
+nav .navigation ul li:nth-child(2).active ~ .indicator{
+    top: 50px;
+    transform: translateX(calc(215px * 1));
+}
+nav .navigation ul li:nth-child(3).active ~ .indicator{
+    top: 50px;
+    transform: translateX(calc(295px * 1));
+}
+nav .navigation ul li:nth-child(4).active ~ .indicator{
+    top: 50px;
+    transform: translateX(calc(375px * 1));
+}
+nav .navigation ul li:nth-child(5).active ~ .indicator{
+    top: 50px;
+    transform: translateX(calc(455px * 1));
+}
+nav .navigation ul li:nth-child(1).active ~ .indicator::after,nav .navigation ul li:nth-child(1).active ~ .indicator::before{
+    transition: 2s;
+    opacity: 1;
+}
+nav .navigation ul li:nth-child(2).active ~ .indicator::after,nav .navigation ul li:nth-child(1).active ~ .indicator::before{
+    transition: 2s;
+    opacity: 1;
+}
+nav .navigation ul li:nth-child(3).active ~ .indicator::after,nav .navigation ul li:nth-child(1).active ~ .indicator::before{
+    transition: 2s;
+    opacity: 1;
+}
+nav .navigation ul li:nth-child(4).active ~ .indicator::after,nav .navigation ul li:nth-child(1).active ~ .indicator::before{
+    transition: 2s;
+    opacity: 1;
+}
+nav .navigation ul li:nth-child(5).active ~ .indicator::after,nav .navigation ul li:nth-child(1).active ~ .indicator::before{
+    transition: 2s;
+    opacity: 1;
+}
+
+
+
+
+nav .name{
+    height: 70px;
+    width: 25%;
+    /* background-color: blue; */
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    font-weight:500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
